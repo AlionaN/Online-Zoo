@@ -1,0 +1,342 @@
+@import url(../general.css);
+@import url(../carousel.css);
+.page {
+  background-color: var(--not-landing-body-back);
+}
+/* Page with sidebar */
+.sidebar {
+  position: absolute;
+  left: 2px;
+  top: 155px;
+  height: calc(909px - 60px) ;
+}
+.sidebar .carousel {
+  padding: 1.7rem 1rem;
+}
+.sidebar .carousel__wrapper {
+  position: sticky;
+  top: 0;
+}
+.sidebar .carousel__items {
+  flex-direction: column;
+}
+.sidebar .carousel__item {
+  flex: initial;
+  width: 7rem;
+  margin: 7px 0;
+}
+.sidebar .carousel__item img {
+  width: 100%;
+  display: block;
+}
+.sidebar .carousel__item_active {
+  width: 134px;
+  border: 10px solid var(--not-landing-body-back);
+  border-radius: 50%;
+  position: relative;
+  box-sizing: content-box;
+}
+.sidebar .carousel__item .carousel__active-back {
+  display: none;
+}
+.sidebar .carousel__item_active .carousel__active-back {
+  display: initial;
+  position: absolute;
+  width: 123px;
+  height: 123px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: linear-gradient(103.3deg, #07EEE0 -15.1%, #DF496D 92.15%);
+  z-index: -1;
+}
+.sidebar .carousel__nav {
+  left: 50%;
+}
+.sidebar .carousel__prev {
+  top: 0;
+  transform: translateX(-50%) rotate(90deg);
+}
+.sidebar .carousel__next {
+  top: initial;
+  right: initial;
+  bottom: 0;
+  transform: translateX(-50%) rotate(-90deg);
+}
+/* Animal Videos block */
+.animal-videos {
+  padding: 60px 0 100px;
+  position: relative;
+}
+.animal-videos__title {
+  color: var(--main-color);
+  font-weight: 900;
+  font-size: 48px;
+}
+.animal-videos__big {
+  width: calc(100% - 15px);
+  height: 442px;
+  border-radius: 5px;
+  margin-top: 45px;
+}
+.animal-videos__small-wrap {
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - 15px);
+  margin-top: 30px;
+}
+.animal-videos__small {
+  border-radius: 5px;
+  width: 31%;
+  position: relative;
+  z-index: -1;
+}
+.animal-videos__small + .animal-videos__small {
+  margin-left: 26px;
+}
+.animal-videos__small::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.animal-videos__descr {
+  margin-top: 49px;
+  padding-left: 21px;
+}
+.animal-videos__subtitle {
+  color: var(--main-color);
+  font-weight: 900;
+  font-size: 20px;
+}
+.animal-videos__subtitle:not(.animal-videos__subtitle:first-child) {
+  margin-top: 13px;
+}
+.animal-videos__text {
+  color: var(--text-color);
+  font-size: 14px;
+  line-height: 1.2;
+  margin-top: 9px;
+}
+.animal-videos__btn {
+  margin-top: 35px;
+  width: 194px;
+}
+/* Dots */
+.dots {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto 0;
+}
+.dot {
+  background-color: #c4c4c4;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+.dot__active {
+  background: linear-gradient(106.89deg, #4BD8B5 -14.32%, #49D6DF 100.68%);
+  width: 11px;
+  height: 11px;
+}
+.dot + .dot {
+  margin-left: 5px;
+}
+.dot:hover {
+  cursor: pointer;
+}
+@media (max-width: 1919px) {
+
+  .sidebar .carousel__item {
+    width: 6rem;
+  }
+  .sidebar .carousel__item_active {
+    width: 6.5rem;
+    border: 5px solid var(--not-landing-body-back);
+  }
+  .sidebar .carousel__active-back {
+    width: 7.6rem;
+    height: 7.6rem;
+  }
+  .sidebar .carousel {
+    padding: 1.7rem .5rem;
+  }
+
+}
+@media (max-width: 1200px) {
+
+  .animal-videos {
+    padding-left: 6rem;
+  }
+  .animal-videos__big {
+    width: 100%;
+    height: 56vh;
+  }
+  .animal-videos__small-wrap {
+    width: 100%;
+  }
+  .animal-videos__small {
+    height: 17vh;
+  }
+  .animal-videos__small + .animal-videos__small {
+    margin-left: initial;
+  }
+  .animal-videos__descr {
+    margin-top: 47px;
+    padding-left: 23px;
+  }
+  .animal-videos__text {
+    margin-top: 11px;
+  }
+  .animal-videos__subtitle:not(.animal-videos__subtitle:first-child) {
+    margin-top: 14px;
+  }
+  .animal-videos__btn {
+    margin-top: 19px;
+    width: 185px;
+  }
+  .dots {
+    margin: 31px auto 0;
+    padding-right: 1rem;
+  }
+  .sidebar {
+    height: calc(715px - 60px);
+  }
+  .sidebar .carousel__items {
+    padding: 1rem 0;
+  }
+
+}
+@media (max-width: 1199px) {
+
+  .animal-videos__big {
+    width: 100%;
+  }
+  .sidebar .carousel__item {
+    width: 4.5rem;
+  }
+  .sidebar .carousel__item_active {
+    width: 4.5rem;
+  }
+  .sidebar .carousel__active-back {
+    width: 5.5rem;
+    height: 5.5rem;
+  }
+  .sidebar .carousel {
+    padding: 1.7rem .2rem;
+  }
+
+}
+@media (max-width: 640px) {
+
+  .animal-videos {
+    padding: 161px 0 81px 7rem;
+  }
+  .animal-videos__title {
+    padding-left: .7rem;
+  }
+  .animal-videos__big {
+    width: calc(100% - 15px);
+    margin-top: 40px;
+    height: 53vh;
+  }
+  .animal-videos__small-wrap {
+    width: calc(100% - 15px);
+    margin-top: 11px;
+  }
+  .dots {
+    padding-right: .8rem;
+  }
+  .animal-videos__descr {
+    margin-top: 50px;
+    padding-left: 0;
+  }
+  .animal-videos__text {
+    margin-top: 8px;
+  }
+  .animal-videos__btn {
+    margin-top: 30px;
+  }
+  .sidebar {
+    left: 0;
+    height: calc(1080px - 60px * 2 - 30px * 2 );
+  }
+
+}
+@media (max-width: 639px) {
+
+  .animal-videos__title {
+    font-size: 24px;
+    padding-left: .4rem;
+  }
+  .animal-videos__small:last-child {
+    display: none;
+  }
+  .animal-videos__small {
+    height: 11vh;
+    width: 48%;
+  }
+
+}
+@media (max-width: 320px) {
+
+  .sidebar .carousel__item {
+    width: 2.5rem;
+  }
+  .sidebar .carousel__item_active {
+    width: 3rem;
+    border: 3px solid var(--not-landing-body-back);
+  }
+  .sidebar .carousel__active-back {
+    width: 3.8rem;
+    height: 3.8rem;
+  }
+  .animal-videos {
+    padding: 132px 0 59px 6rem;
+  }
+  .animal-videos__big {
+    width: calc(100% - 21px);
+    margin-top: 22px;
+    height: 22vh;
+  }
+  .animal-videos__small-wrap {
+    width: calc(100% - 20px);
+    margin-top: 7px;
+  }
+  .dots {
+    padding-right: 1.5rem;
+    margin: 18px auto 0;
+  }
+  .animal-videos__descr {
+    margin-top: 32px;
+  }
+  .animal-videos__subtitle {
+    font-size: 14px;
+  }
+  .animal-videos__text {
+    font-size: 12px;
+  }
+  .animal-videos__subtitle:not(.animal-videos__subtitle:first-child) {
+    margin-top: 16px;
+  }
+  .animal-videos__btn {
+    margin-top: 18px;
+  }
+  .sidebar {
+    left: 5px;
+    top: 127px;
+  }
+  .sidebar .carousel__items {
+    padding: .3rem .2rem;
+  }
+  .sidebar .carousel__item {
+    margin: 5px 0;
+  }
+  .sidebar {
+    height: calc(780px - 60px * 2 - 30px * 2 );
+  }
+
+}
